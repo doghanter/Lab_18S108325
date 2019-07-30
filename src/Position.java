@@ -1,22 +1,12 @@
-public class Position//棋盘上的位置
+public class Position
 {
-    private int X;//格子的横坐标
-    private int Y;//格子的纵坐标
-    private Piece piece;//这个位置上放置的棋子
-
-    public int getX()
-    {
-        return X;
-    }
+    private int X;
+    private int Y;
+    private Piece piece;
 
     public void setX(int x)
     {
         X = x;
-    }
-
-    public int getY()
-    {
-        return Y;
     }
 
     public void setY(int y)
@@ -34,20 +24,8 @@ public class Position//棋盘上的位置
         this.piece = piece;
     }
 
-    public void removePiece()//清除此位置的棋子
+    public void removePiece()
     {
         piece = null;
-    }
-
-    public boolean isEmpty()//判断此位置是否没有棋子
-    {
-        if (piece == null)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
 }

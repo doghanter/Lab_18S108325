@@ -1,9 +1,9 @@
-public class Game//一盘棋类游戏
+public class Game
 {
-    private GameType gameType;//棋局的类型，象棋还是围棋
-    private Player player1;//玩家1
-    private Player player2;//玩家2
-    private Board board;//棋盘
+    private GameType gameType;
+    private Player player1;
+    private Player player2;
+    private Board board;
 
 
     public GameType getGameType()

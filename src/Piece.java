@@ -1,6 +1,6 @@
-public class Piece//棋子，可以直接表示围棋棋子
+public class Piece
 {
-    private Player belong;//棋子所属的玩家
+    private Player belong;
 
     public Player getBelong()
     {

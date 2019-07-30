@@ -1,4 +1,4 @@
-public class GoBoard extends Board//围棋棋盘
+public class GoBoard extends Board
 {
     public GoBoard(Player player1, Player player2)
     {

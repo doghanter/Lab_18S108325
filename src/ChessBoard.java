@@ -14,13 +14,33 @@ public class ChessBoard extends Board
             }
         }
 
-        //player1在下方，执白棋，player2在上方，执黑棋
-        //数组的第一维是横坐标，第二维是纵坐标
-        //初始化棋盘
         Position position;
         ChessPiece chessPiece;
 
-        //放最下面一行
+        for (int i = 0; i < 8; i++)
+        {
+            chessPiece = new ChessPiece();
+            chessPiece.setBelong(player1);
+            chessPiece.setType(ChessPieceType.PAWN);
+            position = new Position();
+            position.setX(i);
+            position.setY(1);
+            position.setPiece(chessPiece);
+            positions[i][1] = position;
+        }
+
+        for (int i = 0; i < 8; i++)
+        {
+            chessPiece = new ChessPiece();
+            chessPiece.setBelong(player2);
+            chessPiece.setType(ChessPieceType.PAWN);
+            position = new Position();
+            position.setX(i);
+            position.setY(6);
+            position.setPiece(chessPiece);
+            positions[i][6] = position;
+        }
+
         chessPiece = new ChessPiece();
         chessPiece.setBelong(player1);
         chessPiece.setType(ChessPieceType.ROCK);
@@ -93,7 +113,6 @@ public class ChessBoard extends Board
         position.setPiece(chessPiece);
         positions[7][0] = position;
 
-        //放最上面一行
         chessPiece = new ChessPiece();
         chessPiece.setBelong(player2);
         chessPiece.setType(ChessPieceType.ROCK);
@@ -165,32 +184,5 @@ public class ChessBoard extends Board
         position.setY(7);
         position.setPiece(chessPiece);
         positions[7][7] = position;
-
-        //放第二行
-        for (int i = 0; i < 8; i++)
-        {
-            chessPiece = new ChessPiece();
-            chessPiece.setBelong(player1);
-            chessPiece.setType(ChessPieceType.PAWN);
-            position = new Position();
-            position.setX(i);
-            position.setY(1);
-            position.setPiece(chessPiece);
-            positions[i][1] = position;
-        }
-
-        //放倒数第二行
-        for (int i = 0; i < 8; i++)
-        {
-            chessPiece = new ChessPiece();
-            chessPiece.setBelong(player2);
-            chessPiece.setType(ChessPieceType.PAWN);
-            position = new Position();
-            position.setX(i);
-            position.setY(6);
-            position.setPiece(chessPiece);
-            positions[i][6] = position;
-        }
-
     }
 }

@@ -1,6 +1,6 @@
 public class Board
 {
-    protected Position[][] positions;//棋盘的格子或交叉点
+    protected Position[][] positions;
 }
 enum BoardType
 {

@@ -2,13 +2,8 @@ import java.util.ArrayList;
 
 public class Player
 {
-    private String name;//玩家的名字
-    private ArrayList<String> moves;//玩家的走棋步骤
-
-    public String getName()
-    {
-        return name;
-    }
+    private String name;
+    private ArrayList<String> moves;
 
     public void setName(String name)
     {
